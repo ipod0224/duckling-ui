@@ -132,6 +132,7 @@ export function useConversion(options: UseConversionOptions = {}) {
       // Continue polling even if one request fails
       console.error('Status poll error:', err);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- stopPolling is intentionally excluded to avoid infinite re-renders
   }, [onComplete, onError]);
 
   // Batch polling
@@ -213,6 +214,7 @@ export function useConversion(options: UseConversionOptions = {}) {
     }
 
     return updatedJobs;
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- stopBatchPolling is intentionally excluded to avoid infinite re-renders
   }, []);
 
   const startPolling = useCallback(
@@ -224,6 +226,7 @@ export function useConversion(options: UseConversionOptions = {}) {
       // Initial poll
       pollStatus(jobId);
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- stopPolling is intentionally excluded to avoid infinite re-renders
     [pollStatus, pollInterval]
   );
 
@@ -246,6 +249,7 @@ export function useConversion(options: UseConversionOptions = {}) {
       // Initial poll
       pollBatchStatus(initialJobs);
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- stopBatchPolling is intentionally excluded to avoid infinite re-renders
     [pollBatchStatus, pollInterval]
   );
 
@@ -264,17 +268,34 @@ export function useConversion(options: UseConversionOptions = {}) {
     };
   }, [stopPolling, stopBatchPolling]);
 
-  // Upload single file
+  // Upload single file or start tracking an existing job (for URL conversions)
   const uploadFile = useCallback(
-    (file: File, settings?: Partial<ConversionSettings>) => {
+    (file: File, existingJobId?: string, settings?: Partial<ConversionSettings>) => {
       setBatchMode(false);
-      setState('uploading');
       setError(null);
       setResult(null);
       setBatchJobs([]);
-      uploadMutation.mutate({ file, settings });
+
+      if (existingJobId) {
+        // URL conversion - job already started, just poll for status
+        setCurrentJob({
+          job_id: existingJobId,
+          filename: file.name || 'url-document',
+          input_format: 'unknown',
+          status: 'processing',
+          message: 'Processing URL...'
+        });
+        setState('processing');
+        setProgress(0);
+        setStatusMessage('Processing document from URL...');
+        startPolling(existingJobId);
+      } else {
+        // Regular file upload
+        setState('uploading');
+        uploadMutation.mutate({ file, settings });
+      }
     },
-    [uploadMutation]
+    [uploadMutation, startPolling]
   );
 
   // Upload multiple files
@@ -284,7 +305,7 @@ export function useConversion(options: UseConversionOptions = {}) {
 
       if (files.length === 1) {
         // Single file, use regular upload
-        uploadFile(files[0], settings);
+        uploadFile(files[0], undefined, settings);
         return;
       }
 

@@ -57,6 +57,13 @@ export interface ChunkingSettings {
   merge_peers: boolean;
 }
 
+export interface EnrichmentSettings {
+  code_enrichment: boolean;
+  formula_enrichment: boolean;
+  picture_classification: boolean;
+  picture_description: boolean;
+}
+
 export interface OutputSettings {
   default_format: string;
 }
@@ -65,6 +72,7 @@ export interface ConversionSettings {
   ocr: OcrSettings;
   tables: TableSettings;
   images: ImageSettings;
+  enrichment: EnrichmentSettings;
   output: OutputSettings;
   performance: PerformanceSettings;
   chunking: ChunkingSettings;
@@ -204,7 +212,7 @@ export interface OcrSettingsResponse {
   }[];
   options: Record<string, {
     description: string;
-    default: any;
+    default: string | number | boolean | null;
     min?: number;
     max?: number;
   }>;
@@ -219,7 +227,7 @@ export interface TableSettingsResponse {
   }[];
   options: Record<string, {
     description: string;
-    default: any;
+    default: string | number | boolean;
   }>;
 }
 
@@ -227,7 +235,7 @@ export interface ImageSettingsResponse {
   images: ImageSettings;
   options: Record<string, {
     description: string;
-    default: any;
+    default: string | number | boolean;
     min?: number;
     max?: number;
   }>;
@@ -242,7 +250,7 @@ export interface PerformanceSettingsResponse {
   }[];
   options: Record<string, {
     description: string;
-    default: any;
+    default: string | number | boolean | null;
     min?: number;
     max?: number;
   }>;
@@ -252,9 +260,18 @@ export interface ChunkingSettingsResponse {
   chunking: ChunkingSettings;
   options: Record<string, {
     description: string;
-    default: any;
+    default: string | number | boolean;
     min?: number;
     max?: number;
+  }>;
+}
+
+export interface EnrichmentSettingsResponse {
+  enrichment: EnrichmentSettings;
+  options: Record<string, {
+    description: string;
+    default: boolean;
+    note?: string;
   }>;
 }
 
