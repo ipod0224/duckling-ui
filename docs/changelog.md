@@ -5,6 +5,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- UI language support (English `en`, Spanish `es`, French `fr`, German `de`) with a language switcher.
+- Multilingual MkDocs documentation (English, Spanish, French, German) served under `/api/docs/site/<locale>/`.
+- Dropzone panel category labels (Documents, Web, Images, Data) now fully internationalized.
+
+### Fixed
+
+- Documentation navigation now displays fully localized page names in all supported languages.
+- Dropzone file format category labels now properly translate based on selected language.
+- Improved documentation page title extraction with better fallback to translated names.
+
+### Changed
+
+- Backend entry point renamed from `app.py` to `duckling.py` for better clarity.
+- Flask application name changed to "duckling" (displays as "Serving Flask app 'duckling'").
+
 ## [2.3.0] - 2026-01-07
 
 ### Changed

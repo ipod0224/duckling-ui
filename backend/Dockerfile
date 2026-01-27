@@ -32,6 +32,10 @@ FROM base AS development
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
+# Docs build tooling (needed for /api/docs/build inside the container when docs are mounted)
+COPY requirements-docs.txt .
+RUN pip install -r requirements-docs.txt
+
 COPY . .
 
 # Create directories
@@ -39,7 +43,7 @@ RUN mkdir -p /app/uploads /app/outputs /app/data
 
 EXPOSE 5001
 
-CMD ["python", "app.py"]
+CMD ["python", "duckling.py"]
 
 # Production stage
 FROM base AS production
@@ -47,6 +51,10 @@ FROM base AS production
 # Copy requirements and install
 COPY requirements.txt .
 RUN pip install -r requirements.txt gunicorn
+
+# Docs build tooling (needed for /api/docs/build inside the container when docs are mounted)
+COPY requirements-docs.txt .
+RUN pip install -r requirements-docs.txt
 
 # Copy application code
 COPY . .
@@ -67,4 +75,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:5001/api/health || exit 1
 
 # Run with Gunicorn for production
-CMD ["gunicorn", "--bind", "0.0.0.0:5001", "--workers", "4", "--threads", "2", "--timeout", "300", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5001", "--workers", "4", "--threads", "2", "--timeout", "300", "duckling:app"]

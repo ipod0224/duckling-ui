@@ -90,7 +90,7 @@ Before deploying to production, ensure:
 - [ ] Set `FLASK_DEBUG=false` environment variable
 - [ ] Set a strong `SECRET_KEY` environment variable
 - [ ] Configure `FLASK_HOST` appropriately (not 0.0.0.0 unless behind reverse proxy)
-- [ ] Update CORS origins in `backend/app.py` to match your domain
+- [ ] Update CORS origins in `backend/duckling.py` to match your domain
 - [ ] Use HTTPS in production (configure via reverse proxy)
 - [ ] Set appropriate `MAX_CONTENT_LENGTH` for your use case
 - [ ] Review and restrict file upload extensions if needed
@@ -113,6 +113,8 @@ Before deploying to production, ensure:
    - Documentation is served from local files only
    - No user-generated content is rendered
    - Content is converted server-side with trusted markdown library
+
+2. **Multilingual documentation paths**: The documentation site is served under locale-prefixed paths (e.g. `/api/docs/site/en/`, `/api/docs/site/es/`). This does not change the trust model: docs are still served from local build output only.
 
 2. **Local File Access**: The application reads and writes files to configured directories. Ensure proper filesystem permissions.
 

@@ -5,7 +5,7 @@
 site_name: Duckling
 site_description: A modern, user-friendly graphical interface for Docling - the powerful document conversion library by IBM
 site_author: Duckling Contributors
-site_url: https://davidgs.github.io/duckling/
+site_url: https://duckling-ui.org/
 
 # Repository
 repo_name: davidgs/duckling
@@ -77,6 +77,111 @@ plugins:
       separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - minify:
       minify_html: true
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_material: false
+      languages:
+        - locale: en
+          default: true
+          name: English
+          link: /en/
+        - locale: es
+          name: Español
+          link: /es/
+          nav_translations:
+            Home: Inicio
+            Getting Started: Primeros pasos
+            Installation: Instalación
+            "Quick Start": Inicio rápido
+            Docker: Docker
+            "User Guide": Guía del usuario
+            Features: Características
+            Screenshots: Capturas de pantalla
+            "Supported Formats": Formatos soportados
+            Configuration: Configuración
+            "API Reference": Referencia de API
+            Conversion: Conversión
+            Settings: Configuración
+            History: Historial
+            Architecture: Arquitectura
+            "System Overview": Resumen del sistema
+            Components: Componentes
+            Diagrams: Diagramas
+            Deployment: Despliegue
+            Production: Producción
+            Scaling: Escalado
+            Security: Seguridad
+            Contributing: Contribuir
+            "Development Setup": Configuración de desarrollo
+            "Code Style": Estilo de código
+            Testing: Pruebas
+            "Code of Conduct": Código de conducta
+            Changelog: Registro de cambios
+        - locale: fr
+          name: Français
+          link: /fr/
+          nav_translations:
+            Home: Accueil
+            "Getting Started": Bien démarrer
+            Installation: Installation
+            "Quick Start": Démarrage rapide
+            Docker: Docker
+            "User Guide": Guide d'utilisation
+            Features: Fonctionnalités
+            Screenshots: Captures d'écran
+            "Supported Formats": Formats pris en charge
+            Configuration: Configuration
+            "API Reference": Référence API
+            Conversion: Conversion
+            Settings: Paramètres
+            History: Historique
+            Architecture: Architecture
+            "System Overview": Vue d'ensemble du système
+            Components: Composants
+            Diagrams: Diagrammes
+            Deployment: Déploiement
+            Production: Production
+            Scaling: Mise à l'échelle
+            Security: Sécurité
+            Contributing: Contribuer
+            "Development Setup": Configuration du développement
+            "Code Style": Style de code
+            Testing: Tests
+            "Code of Conduct": Code de conduite
+            Changelog: Journal des modifications
+        - locale: de
+          name: Deutsch
+          link: /de/
+          nav_translations:
+            Home: Startseite
+            "Getting Started": Erste Schritte
+            Installation: Installation
+            "Quick Start": Schnellstart
+            Docker: Docker
+            "User Guide": Benutzerhandbuch
+            Features: Funktionen
+            Screenshots: Screenshots
+            "Supported Formats": Unterstützte Formate
+            Configuration: Konfiguration
+            "API Reference": API-Referenz
+            Conversion: Konvertierung
+            Settings: Einstellungen
+            History: Verlauf
+            Architecture: Architektur
+            "System Overview": Systemübersicht
+            Components: Komponenten
+            Diagrams: Diagramme
+            Deployment: Bereitstellung
+            Production: Produktion
+            Scaling: Skalierung
+            Security: Sicherheit
+            Contributing: Mitwirken
+            "Development Setup": Entwicklungsumgebung
+            "Code Style": Code-Stil
+            Testing: Tests
+            "Code of Conduct": Verhaltenskodex
+            Changelog: Änderungsprotokoll
 
 # Extensions
 markdown_extensions:
@@ -181,6 +286,19 @@ extra:
   analytics:
     provider: google
     property: G-XXXXXXXXXX
+  alternate:
+    - name: English
+      link: https://duckling-ui.org/en/
+      lang: en
+    - name: Español
+      link: https://duckling-ui.org/es/
+      lang: es
+    - name: Français
+      link: https://duckling-ui.org/fr/
+      lang: fr
+    - name: Deutsch
+      link: https://duckling-ui.org/de/
+      lang: de
 
 extra_css:
   - stylesheets/extra.css

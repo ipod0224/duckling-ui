@@ -59,7 +59,7 @@ jobs:
 
       - name: Run frontend tests
         working-directory: frontend
-        run: npm test
+        run: npm test -- --run
 
       - name: Build frontend
         working-directory: frontend
@@ -92,3 +92,27 @@ jobs:
         working-directory: frontend
         run: npx tsc --noEmit
 
+  docs-build:
+    name: Docs Build (MkDocs)
+    runs-on: ubuntu-latest
+
+          python-version: '3.13'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+          cache-dependency-path: requirements-docs.txt
+
+      - name: Install docs dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-docs.txt
+
+      - name: Build docs (strict)
+        run: |
+          mkdocs build --strict

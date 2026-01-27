@@ -1,0 +1,317 @@
+{
+  "language": {
+    "label": "Langue",
+    "en": "Anglais",
+    "es": "Espagnol",
+    "fr": "Français",
+    "de": "Allemand"
+  },
+  "app": {
+    "name": "Duckling",
+    "tagline": "Conversion de documents",
+    "poweredBy": "Propulsé par"
+  },
+  "actions": {
+    "batch": "Lot",
+    "documentation": "Documentation",
+    "history": "Historique",
+    "settings": "Paramètres",
+    "close": "Fermer"
+  },
+  "home": {
+    "headline": "Convertissez n'importe quel document",
+    "subheadline": "Transformez des PDF, documents Word, présentations, images et plus en formats structurés prêts pour l'IA."
+  },
+  "batch": {
+    "toggleTitle": "Activer le mode lot pour téléverser plusieurs fichiers"
+  },
+  "conversion": {
+    "uploadingSingle": "Téléversement du fichier…",
+    "uploadingMultiple": "Téléversement des fichiers…",
+    "failedTitle": "Échec de la conversion",
+    "failedCta": "Réessayer",
+    "processingFilesTitle": "Traitement des fichiers",
+    "overallProgress": "Progression globale",
+    "filesCount": "{{completed}}/{{total}} fichiers"
+  },
+  "features": {
+    "ocr": "OCR",
+    "ocrDesc": "Extraire le texte des images",
+    "tables": "Tableaux",
+    "tablesDesc": "Exporter en CSV",
+    "images": "Images",
+    "imagesDesc": "Extraire les figures",
+    "rag": "RAG",
+    "ragDesc": "Segments de document"
+  },
+  "docsPanel": {
+    "title": "Documentation",
+    "subtitle": "Référence Duckling",
+    "navigation": "Navigation",
+    "homeCategory": "Accueil",
+    "loading": "Chargement…",
+    "notBuiltTitle": "Documentation non générée",
+    "notBuiltBody": "Le site de documentation doit être généré avant d'être affiché.",
+    "build": "Générer la documentation",
+    "building": "Génération…",
+    "rebuild": "Reconstruire",
+    "openNewTab": "Ouvrir dans un nouvel onglet",
+    "notBuiltYet": "La documentation n'est pas encore générée.",
+    "fullAt": "Documentation complète sur"
+  },
+  "settingsPanel": {
+    "title": "Paramètres"
+  },
+  "settings": {
+    "sections": {
+      "ocr": "OCR (reconnaissance optique de caractères)",
+      "tables": "Extraction de tableaux",
+      "images": "Gestion des images",
+      "performance": "Performances",
+      "chunking": "RAG / Segmentation",
+      "enrichment": "Enrichissement du document",
+      "output": "Préférences de sortie"
+    },
+    "actions": {
+      "installing": "Installation…",
+      "install": "Installer {{name}}",
+      "dismiss": "Fermer",
+      "download": "Télécharger",
+      "resetDefaults": "Réinitialiser"
+    },
+    "ocr": {
+      "enable": {
+        "label": "Activer l'OCR",
+        "description": "Extraire le texte des documents numérisés et des images"
+      },
+      "backend": {
+        "label": "Moteur OCR",
+        "description": "Moteur utilisé pour la reconnaissance de texte"
+      },
+      "backendStatus": {
+        "availableSuffix": " ✓",
+        "needsSystemInstallSuffix": " ⚠ (installation système requise)",
+        "notConfiguredSuffix": " (non configuré)",
+        "notInstalledSuffix": " (non installé)"
+      },
+      "status": {
+        "installedReady": "{{name}} est installé et prêt",
+        "requiresManual": "Installation système manuelle requise",
+        "cannotInstallInUi": "{{name}} ne peut pas être installé depuis cette interface. Veuillez l'installer manuellement :",
+        "downloadFromGithub": "Télécharger depuis GitHub",
+        "notInstalled": "{{name}} n'est pas installé"
+      },
+      "language": {
+        "label": "Langue OCR",
+        "description": "Langue principale pour la reconnaissance de texte"
+      },
+      "forceFullPage": {
+        "label": "Forcer l'OCR pleine page",
+        "description": "Appliquer l'OCR à toute la page au lieu des seules zones détectées"
+      },
+      "useGpu": {
+        "label": "Utiliser le GPU",
+        "description": "Activer l'accélération GPU (EasyOCR uniquement)"
+      },
+      "confidence": {
+        "label": "Seuil de confiance",
+        "description": "Confiance minimale pour les résultats OCR"
+      }
+    },
+    "tables": {
+      "enable": {
+        "label": "Activer l'extraction de tableaux",
+        "description": "Détecter et extraire les tableaux des documents"
+      },
+      "mode": {
+        "label": "Mode de détection",
+        "description": "Équilibrer vitesse et précision"
+      },
+      "structure": {
+        "label": "Extraction de structure",
+        "description": "Préserver la structure du tableau et les relations entre cellules"
+      },
+      "cellMatching": {
+        "label": "Correspondance des cellules",
+        "description": "Faire correspondre le contenu des cellules à la structure"
+      }
+    },
+    "images": {
+      "extract": {
+        "label": "Extraire les images",
+        "description": "Extraire les images intégrées des documents"
+      },
+      "classify": {
+        "label": "Classer les images",
+        "description": "Classer et étiqueter automatiquement les images"
+      },
+      "generatePage": {
+        "label": "Générer des images de page",
+        "description": "Créer des images de chaque page"
+      },
+      "generatePictures": {
+        "label": "Générer des images de figures",
+        "description": "Extraire les figures intégrées comme fichiers séparés"
+      },
+      "generateTables": {
+        "label": "Générer des images de tableaux",
+        "description": "Extraire les tableaux sous forme d'images"
+      },
+      "scale": {
+        "label": "Échelle des images",
+        "description": "Facteur d'échelle (1,0 = original)"
+      }
+    },
+    "performance": {
+      "device": {
+        "label": "Périphérique de traitement",
+        "description": "Matériel pour le traitement des documents"
+      },
+      "threads": {
+        "label": "Threads CPU",
+        "description": "Nombre de threads utilisés"
+      },
+      "timeout": {
+        "label": "Délai d'expiration (secondes)",
+        "description": "Temps de traitement maximal (0 = illimité)"
+      }
+    },
+    "chunking": {
+      "enable": {
+        "label": "Activer la segmentation",
+        "description": "Découper les documents en segments pour le RAG"
+      },
+      "maxTokens": {
+        "label": "Tokens max par segment",
+        "description": "Nombre maximal de tokens par segment"
+      },
+      "mergePeers": {
+        "label": "Fusionner",
+        "description": "Fusionner les petits segments avec des métadonnées similaires"
+      }
+    },
+    "enrichment": {
+      "code": {
+        "label": "Enrichissement du code",
+        "description": "Améliorer les blocs de code avec détection de langage"
+      },
+      "formula": {
+        "label": "Enrichissement des formules",
+        "description": "Extraire le LaTeX des formules mathématiques"
+      },
+      "pictureClassification": {
+        "label": "Classification d'images",
+        "description": "Classer les images par type (figure, graphique, photo, etc.)"
+      },
+      "pictureDescription": {
+        "label": "Description d'images",
+        "description": "Générer des légendes IA (plus lent)"
+      },
+      "warning": "⚠️ Les fonctionnalités d'enrichissement peuvent nécessiter des téléchargements de modèles supplémentaires et augmenter fortement le temps de traitement.",
+      "preDownload": {
+        "title": "Pré-télécharger les modèles",
+        "description": "Téléchargez les modèles à l'avance pour éviter des délais lors du traitement."
+      },
+      "model": {
+        "ready": "✓ Prêt",
+        "unavailable": "⚠ Indisponible"
+      },
+      "upgradeTip": "💡 Astuce : mettez à niveau Docling pour activer l'enrichissement :"
+    },
+    "output": {
+      "defaultFormat": {
+        "label": "Format par défaut",
+        "description": "Format de sortie préféré pour les téléchargements"
+      }
+    }
+  },
+  "historyPanel": {
+    "title": "Historique",
+    "searchPlaceholder": "Rechercher dans l'historique…",
+    "total": "Total",
+    "success": "Succès",
+    "failed": "Échecs",
+    "noResults": "Aucun résultat",
+    "noHistory": "Aucun historique pour le moment",
+    "clearAll": "Effacer tout l'historique",
+    "clearConfirm": "Voulez-vous vraiment effacer tout l'historique ?"
+  },
+  "dropzone": {
+    "localFile": "Fichier local",
+    "localFiles": "Fichiers locaux",
+    "url": "URL",
+    "urls": "URLs",
+    "uploading": "Téléversement…",
+    "fileTypeNotSupported": "Type de fichier non pris en charge",
+    "dropHereSingle": "Déposez votre fichier ici",
+    "dropHereMultiple": "Déposez vos fichiers ici",
+    "dragAndDropSingle": "Glissez-déposez votre document ici",
+    "dragAndDropMultiple": "Glissez-déposez vos documents ici",
+    "orClickToBrowse": "ou cliquez pour parcourir",
+    "multipleEnabled": "✨ Téléversement multiple activé - sélectionnez ou déposez plusieurs fichiers",
+    "categories": {
+      "documents": "Documents",
+      "web": "Web",
+      "images": "Images",
+      "data": "Données"
+    },
+    "enterUrlTitleSingle": "Entrer l'URL du document",
+    "enterUrlTitleMultiple": "Entrer les URLs des documents",
+    "enterUrlBodySingle": "Collez un lien direct vers un document (PDF, DOCX, etc.)",
+    "enterUrlBodyMultiple": "Collez une URL par ligne pour convertir plusieurs documents",
+    "singleUrlPlaceholder": "https://example.com/document.pdf",
+    "multipleUrlsPlaceholder": "https://example.com/document1.pdf\nhttps://example.com/document2.docx\nhttps://example.com/document3.html",
+    "urlsEntered": "{{count}} URL(s) saisie(s)",
+    "processing": "Traitement…",
+    "convert": "Convertir",
+    "convertAll": "Tout convertir",
+    "loading": "Chargement…",
+    "pressEnter": "Appuyez sur Entrée pour soumettre ou cliquez sur Convertir",
+    "supportedHint": "Pris en charge : PDF, DOCX, PPTX, XLSX, HTML, Markdown, Images et plus",
+    "maxFileSize": "Taille maximale : 100 Mo par fichier",
+    "maxDownloadSize": "Taille maximale de téléchargement : 100 Mo par URL",
+    "errorEnterUrl": "Veuillez entrer une URL",
+    "errorInvalidUrl": "Veuillez entrer une URL HTTP ou HTTPS valide",
+    "errorEnterAtLeastOneUrl": "Veuillez entrer au moins une URL",
+    "errorInvalidUrls": "URLs invalides : {{urls}}"
+  },
+  "export": {
+    "completeTitle": "Conversion terminée !",
+    "confidence": "Confiance :",
+    "images": "images",
+    "tables": "tableaux",
+    "chunks": "segments",
+    "tabExportFormats": "Formats d'export",
+    "tabImages": "Images",
+    "tabTables": "Tableaux",
+    "tabChunks": "Segments RAG",
+    "exportFormatTitle": "Format d'export",
+    "download": "Télécharger",
+    "convertAnother": "Convertir un autre document",
+    "previewTitle": "Aperçu",
+    "rendered": "Rendu",
+    "raw": "Brut",
+    "hide": "Masquer",
+    "show": "Afficher",
+    "noPreview": "Aucun aperçu disponible pour ce format",
+    "clickShow": "Cliquez sur \"Afficher\" pour voir l'aperçu",
+    "extractedImagesTitle": "Images extraites",
+    "noImages": "Aucune image extraite de ce document",
+    "extractedTablesTitle": "Tableaux extraits",
+    "noTables": "Aucun tableau extrait de ce document",
+    "rows": "{{count}} lignes",
+    "ragChunksTitle": "Segments RAG",
+    "noChunks": "Aucun segment généré",
+    "enableChunkingHint": "Activez la segmentation dans les Paramètres pour générer des segments RAG",
+    "downloadAllChunks": "Télécharger tous les segments (JSON)",
+    "viewFullSize": "Voir en taille réelle"
+  },
+  "progress": {
+    "title": "Conversion du document",
+    "uploadComplete": "Téléversement terminé",
+    "analyzing": "Analyse de la structure du document",
+    "extracting": "Extraction du contenu",
+    "generating": "Génération des formats de sortie",
+    "finalizing": "Finalisation"
+  }
+}
