@@ -1,22 +1,22 @@
-# Conversion API
+# Konvertierungs-API
 
-Endpoints for uploading and converting documents.
+Endpoints zum Hochladen und Konvertieren von Dokumenten.
 
-## Upload and Convert Single Document
+## Einzelnes Dokument hochladen und konvertieren
 
 ```http
 POST /api/convert
 Content-Type: multipart/form-data
 ```
 
-### Parameters
+### Parameter
 
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `file` | File | Yes | Document to convert |
-| `settings` | JSON string | No | Conversion settings override |
+| Name | Typ | Erforderlich | Beschreibung |
+|------|-----|--------------|--------------|
+| `file` | Datei | Ja | Zu konvertierendes Dokument |
+| `settings` | JSON-String | Nein | Überschreibung der Konvertierungseinstellungen |
 
-### Example Request
+### Beispiel-Anfrage
 
 ```bash
 curl -X POST http://localhost:5001/api/convert \
@@ -24,7 +24,7 @@ curl -X POST http://localhost:5001/api/convert \
   -F 'settings={"ocr":{"enabled":true,"language":"en"}}'
 ```
 
-### Response (202 Accepted)
+### Antwort (202 Akzeptiert)
 
 ```json
 {
@@ -38,21 +38,21 @@ curl -X POST http://localhost:5001/api/convert \
 
 ---
 
-## Batch Convert Multiple Documents
+## Mehrere Dokumente stapelweise konvertieren
 
 ```http
 POST /api/convert/batch
 Content-Type: multipart/form-data
 ```
 
-### Parameters
+### Parameter
 
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `files` | File[] | Yes | Documents to convert |
-| `settings` | JSON string | No | Conversion settings override |
+| Name | Typ | Erforderlich | Beschreibung |
+|------|-----|--------------|--------------|
+| `files` | Datei[] | Ja | Zu konvertierende Dokumente |
+| `settings` | JSON-String | Nein | Überschreibung der Konvertierungseinstellungen |
 
-### Example Request
+### Beispiel-Anfrage
 
 ```bash
 curl -X POST http://localhost:5001/api/convert/batch \
@@ -61,7 +61,7 @@ curl -X POST http://localhost:5001/api/convert/batch \
   -F "files=@image.png"
 ```
 
-### Response (202 Accepted)
+### Antwort (202 Akzeptiert)
 
 ```json
 {
@@ -92,21 +92,21 @@ curl -X POST http://localhost:5001/api/convert/batch \
 
 ---
 
-## Convert Document from URL
+## Dokument von URL konvertieren
 
 ```http
 POST /api/convert/url
 Content-Type: application/json
 ```
 
-### Parameters
+### Parameter
 
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `url` | string | Yes | URL of the document to convert |
-| `settings` | object | No | Conversion settings override |
+| Name | Typ | Erforderlich | Beschreibung |
+|------|-----|--------------|--------------|
+| `url` | string | Ja | URL des zu konvertierenden Dokuments |
+| `settings` | object | Nein | Überschreibung der Konvertierungseinstellungen |
 
-### Example Request
+### Beispiel-Anfrage
 
 ```bash
 curl -X POST http://localhost:5001/api/convert/url \
@@ -117,7 +117,7 @@ curl -X POST http://localhost:5001/api/convert/url \
   }'
 ```
 
-### Response (202 Accepted)
+### Antwort (202 Akzeptiert)
 
 ```json
 {
@@ -132,21 +132,21 @@ curl -X POST http://localhost:5001/api/convert/url \
 
 ---
 
-## Batch Convert Documents from URLs
+## Mehrere Dokumente von URLs stapelweise konvertieren
 
 ```http
 POST /api/convert/url/batch
 Content-Type: application/json
 ```
 
-### Parameters
+### Parameter
 
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `urls` | string[] | Yes | Array of URLs to convert |
-| `settings` | object | No | Conversion settings override |
+| Name | Typ | Erforderlich | Beschreibung |
+|------|-----|--------------|--------------|
+| `urls` | string[] | Ja | Array von zu konvertierenden URLs |
+| `settings` | object | Nein | Überschreibung der Konvertierungseinstellungen |
 
-### Example Request
+### Beispiel-Anfrage
 
 ```bash
 curl -X POST http://localhost:5001/api/convert/url/batch \
@@ -160,7 +160,7 @@ curl -X POST http://localhost:5001/api/convert/url/batch \
   }'
 ```
 
-### Response (202 Accepted)
+### Antwort (202 Akzeptiert)
 
 ```json
 {
@@ -192,13 +192,13 @@ curl -X POST http://localhost:5001/api/convert/url/batch \
 
 ---
 
-## Get Conversion Status
+## Konvertierungsstatus abrufen
 
 ```http
 GET /api/convert/{job_id}/status
 ```
 
-### Response (Processing)
+### Antwort (Verarbeitung)
 
 ```json
 {
@@ -209,7 +209,7 @@ GET /api/convert/{job_id}/status
 }
 ```
 
-### Response (Completed)
+### Antwort (Abgeschlossen)
 
 ```json
 {
@@ -226,7 +226,7 @@ GET /api/convert/{job_id}/status
 }
 ```
 
-### Response (Failed)
+### Antwort (Fehlgeschlagen)
 
 ```json
 {
@@ -240,13 +240,13 @@ GET /api/convert/{job_id}/status
 
 ---
 
-## Get Conversion Result
+## Konvertierungsergebnis abrufen
 
 ```http
 GET /api/convert/{job_id}/result
 ```
 
-### Response
+### Antwort
 
 ```json
 {
@@ -272,13 +272,13 @@ GET /api/convert/{job_id}/result
 
 ---
 
-## Get Extracted Images
+## Extrahierte Bilder abrufen
 
 ```http
 GET /api/convert/{job_id}/images
 ```
 
-### Response
+### Antwort
 
 ```json
 {
@@ -305,23 +305,23 @@ GET /api/convert/{job_id}/images
 
 ---
 
-## Download Extracted Image
+## Extrahierte Bilder herunterladen
 
 ```http
 GET /api/convert/{job_id}/images/{image_id}
 ```
 
-**Response**: Binary image file (PNG)
+**Antwort**: Binäre Bilddatei (PNG)
 
 ---
 
-## Get Extracted Tables
+## Extrahierte Tabellen abrufen
 
 ```http
 GET /api/convert/{job_id}/tables
 ```
 
-### Response
+### Antwort
 
 ```json
 {
@@ -345,33 +345,33 @@ GET /api/convert/{job_id}/tables
 
 ---
 
-## Download Table as CSV
+## Tabelle als CSV herunterladen
 
 ```http
 GET /api/convert/{job_id}/tables/{table_id}/csv
 ```
 
-**Response**: CSV file
+**Antwort**: CSV-Datei
 
 ---
 
-## Download Table as Image
+## Tabelle als Bild herunterladen
 
 ```http
 GET /api/convert/{job_id}/tables/{table_id}/image
 ```
 
-**Response**: Binary image file (PNG)
+**Antwort**: Binäre Bilddatei (PNG)
 
 ---
 
-## Get Document Chunks
+## Dokument-Segmente abrufen
 
 ```http
 GET /api/convert/{job_id}/chunks
 ```
 
-### Response
+### Antwort
 
 ```json
 {
@@ -400,13 +400,13 @@ GET /api/convert/{job_id}/chunks
 
 ---
 
-## Export Document
+## Dokument exportieren
 
 ```http
 GET /api/export/{job_id}/{format}
 ```
 
-### Supported Formats
+### Unterstützte Formate
 
 - `markdown`
 - `html`
@@ -416,17 +416,17 @@ GET /api/export/{job_id}/{format}
 - `document_tokens`
 - `chunks`
 
-**Response**: File download with appropriate MIME type
+**Antwort**: Datei-Download mit entsprechendem MIME-Typ
 
 ---
 
-## Delete Job
+## Job löschen
 
 ```http
 DELETE /api/convert/{job_id}
 ```
 
-### Response
+### Antwort
 
 ```json
 {
@@ -434,4 +434,3 @@ DELETE /api/convert/{job_id}
   "job_id": "550e8400-e29b-41d4-a716-446655440000"
 }
 ```
-

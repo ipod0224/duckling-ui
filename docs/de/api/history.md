@@ -1,22 +1,22 @@
-# History API
+# Verlaufs-API
 
-Endpoints for accessing conversion history.
+Endpoints zum Zugriff auf den Konvertierungsverlauf.
 
-## Get Conversion History
+## Konvertierungsverlauf abrufen
 
 ```http
 GET /api/history
 ```
 
-### Query Parameters
+### Abfrageparameter
 
-| Name | Type | Default | Description |
-|------|------|---------|-------------|
-| `limit` | int | 50 | Maximum entries to return |
-| `offset` | int | 0 | Number of entries to skip |
-| `status` | string | - | Filter by status |
+| Name | Typ | Standard | Beschreibung |
+|------|-----|----------|--------------|
+| `limit` | int | 50 | Maximale Anzahl zurückzugebender Einträge |
+| `offset` | int | 0 | Anzahl zu überspringender Einträge |
+| `status` | string | - | Nach Status filtern |
 
-### Response
+### Antwort
 
 ```json
 {
@@ -41,27 +41,27 @@ GET /api/history
 
 ---
 
-## Get Recent History
+## Kürzlichen Verlauf abrufen
 
 ```http
 GET /api/history/recent
 ```
 
-### Query Parameters
+### Abfrageparameter
 
-| Name | Type | Default | Description |
-|------|------|---------|-------------|
-| `limit` | int | 10 | Maximum entries to return |
+| Name | Typ | Standard | Beschreibung |
+|------|-----|----------|--------------|
+| `limit` | int | 10 | Maximale Anzahl zurückzugebender Einträge |
 
 ---
 
-## Get History Entry
+## Verlaufseintrag abrufen
 
 ```http
 GET /api/history/{job_id}
 ```
 
-### Response
+### Antwort
 
 ```json
 {
@@ -84,13 +84,13 @@ GET /api/history/{job_id}
 
 ---
 
-## Delete History Entry
+## Verlaufseintrag löschen
 
 ```http
 DELETE /api/history/{job_id}
 ```
 
-### Response
+### Antwort
 
 ```json
 {
@@ -101,13 +101,13 @@ DELETE /api/history/{job_id}
 
 ---
 
-## Get History Statistics
+## Verlaufsstatistiken abrufen
 
 ```http
 GET /api/history/stats
 ```
 
-### Response
+### Antwort
 
 ```json
 {
@@ -127,20 +127,20 @@ GET /api/history/stats
 
 ---
 
-## Search History
+## Verlauf durchsuchen
 
 ```http
 GET /api/history/search
 ```
 
-### Query Parameters
+### Abfrageparameter
 
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `q` | string | Yes | Search query |
-| `limit` | int | No | Maximum results (default: 20) |
+| Name | Typ | Erforderlich | Beschreibung |
+|------|-----|--------------|--------------|
+| `q` | string | Ja | Suchanfrage |
+| `limit` | int | Nein | Maximale Ergebnisse (Standard: 20) |
 
-### Response
+### Antwort
 
 ```json
 {
@@ -152,23 +152,23 @@ GET /api/history/search
 
 ---
 
-## Export History
+## Verlauf exportieren
 
 ```http
 GET /api/history/export
 ```
 
-**Response**: JSON file download with all history entries
+**Antwort**: JSON-Datei-Download mit allen Verlaufseinträgen
 
 ---
 
-## Clear All History
+## Gesamten Verlauf löschen
 
 ```http
 DELETE /api/history
 ```
 
-### Response
+### Antwort
 
 ```json
 {
@@ -176,4 +176,3 @@ DELETE /api/history
   "count": 150
 }
 ```
-

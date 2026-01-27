@@ -1,8 +1,8 @@
-# Architecture Diagrams
+# Diagrammes d'architecture
 
-Visual diagrams for Duckling architecture.
+Diagrammes visuels pour l'architecture de Duckling.
 
-## System Architecture Overview
+## Aperçu de l'architecture système
 
 ```mermaid
 flowchart LR
@@ -27,7 +27,7 @@ flowchart LR
 
 ---
 
-## Simple Architecture
+## Architecture simple
 
 ```mermaid
 graph LR
@@ -45,7 +45,7 @@ graph LR
 
 ---
 
-## Detailed Layer View
+## Vue détaillée des couches
 
 ```mermaid
 graph TB
@@ -95,7 +95,7 @@ graph TB
 
 ---
 
-## Conversion Flow
+## Flux de conversion
 
 ```mermaid
 sequenceDiagram
@@ -124,7 +124,7 @@ sequenceDiagram
 
 ---
 
-## Batch Processing
+## Traitement par lot
 
 ```mermaid
 sequenceDiagram
@@ -153,9 +153,9 @@ sequenceDiagram
 
 ---
 
-## Scaling Architecture
+## Architecture de mise à l'échelle
 
-For production deployments with high traffic:
+Pour les déploiements en production avec un trafic élevé :
 
 ```mermaid
 graph LR
@@ -185,7 +185,7 @@ graph LR
 
 ---
 
-## Component Tree
+## Arbre des composants
 
 ```mermaid
 graph TD
@@ -210,7 +210,7 @@ graph TD
 
 ---
 
-## OCR Options
+## Options OCR
 
 ```mermaid
 graph LR
@@ -234,15 +234,14 @@ graph LR
 
 ---
 
-## Static Diagram Images
+## Images de diagrammes statiques
 
-For environments that don't support Mermaid rendering, static images are available:
+Pour les environnements qui ne prennent pas en charge le rendu Mermaid, des images statiques sont disponibles :
 
-- [System Architecture](../arch.png)
-- [Detailed Layer View](../Detailed-Layer-View.png)
-- [Conversion Pipeline](../ConversionPipeline.png)
-- [Batch Processing](../BatchProcessing.png)
-- [Scaling Architecture](../ScalingArchitecture.png)
-- [Component Tree](../ComponentTree.png)
-- [OCR Options](../OCR.png)
-
+- [Architecture système](../arch.png)
+- [Vue détaillée des couches](../Detailed-Layer-View.png)
+- [Pipeline de conversion](../ConversionPipeline.png)
+- [Traitement par lot](../BatchProcessing.png)
+- [Architecture de mise à l'échelle](../ScalingArchitecture.png)
+- [Arbre des composants](../ComponentTree.png)
+- [Options OCR](../OCR.png)

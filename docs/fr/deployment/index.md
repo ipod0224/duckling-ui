@@ -1,10 +1,10 @@
-# Deployment
+# Déploiement
 
-Guides for deploying Duckling in various environments.
+Guides pour déployer Duckling dans divers environnements.
 
-## Overview
+## Aperçu
 
-Duckling can be deployed in multiple ways depending on your needs:
+Duckling peut être déployé de plusieurs façons selon vos besoins :
 
 <div class="grid cards" markdown>
 
@@ -12,66 +12,65 @@ Duckling can be deployed in multiple ways depending on your needs:
 
     ---
 
-    Deploy with Gunicorn, Nginx, and systemd
+    Déployez avec Gunicorn, Nginx et systemd
 
-    [:octicons-arrow-right-24: Production Guide](production.md)
+    [:octicons-arrow-right-24: Guide de production](production.md)
 
--   :material-scale-balance:{ .lg .middle } __Scaling__
-
-    ---
-
-    Scale for high traffic with load balancing
-
-    [:octicons-arrow-right-24: Scaling Guide](scaling.md)
-
--   :material-shield-check:{ .lg .middle } __Security__
+-   :material-scale-balance:{ .lg .middle } __Mise à l'échelle__
 
     ---
 
-    Security best practices and hardening
+    Mettez à l'échelle pour un trafic élevé avec équilibrage de charge
 
-    [:octicons-arrow-right-24: Security Guide](security.md)
+    [:octicons-arrow-right-24: Guide de mise à l'échelle](scaling.md)
+
+-   :material-shield-check:{ .lg .middle } __Sécurité__
+
+    ---
+
+    Bonnes pratiques de sécurité et durcissement
+
+    [:octicons-arrow-right-24: Guide de sécurité](security.md)
 
 </div>
 
-## Deployment Options
+## Options de déploiement
 
-| Method | Best For | Complexity |
-|--------|----------|------------|
-| Docker Compose | Quick deployment, testing | Low |
-| Manual + Nginx | Full control, customization | Medium |
-| Kubernetes | Large scale, cloud-native | High |
+| Méthode | Idéal pour | Complexité |
+|---------|------------|------------|
+| Docker Compose | Déploiement rapide, tests | Faible |
+| Manuel + Nginx | Contrôle total, personnalisation | Moyenne |
+| Kubernetes | Grande échelle, cloud-native | Élevée |
 
-## Quick Reference
+## Référence rapide
 
-### Docker (Simplest)
+### Docker (Le plus simple)
 
 ```bash
 docker-compose up -d --build
 ```
 
-### Manual Deployment
+### Déploiement manuel
 
 ```bash
-# Backend with Gunicorn
+# Backend avec Gunicorn
 cd backend
 gunicorn -w 4 -b 0.0.0.0:5001 duckling:app
 
-# Frontend build
+# Build du frontend
 cd frontend
 npm run build
-# Serve dist/ with nginx
+# Servir dist/ avec nginx
 ```
 
-## Environment Checklist
+## Liste de vérification de l'environnement
 
-Before deploying to production:
+Avant de déployer en production :
 
-- [ ] Set strong `SECRET_KEY`
-- [ ] Set `FLASK_DEBUG=false`
-- [ ] Configure CORS for your domain
-- [ ] Enable HTTPS
-- [ ] Set appropriate file size limits
-- [ ] Configure reverse proxy
-- [ ] Set up monitoring and logging
-
+- [ ] Définir une `SECRET_KEY` forte
+- [ ] Définir `FLASK_DEBUG=false`
+- [ ] Configurer CORS pour votre domaine
+- [ ] Activer HTTPS
+- [ ] Définir des limites de taille de fichier appropriées
+- [ ] Configurer le reverse proxy
+- [ ] Configurer la surveillance et les journaux

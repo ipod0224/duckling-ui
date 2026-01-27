@@ -1,8 +1,8 @@
-# Architecture Diagrams
+# Architekturdiagramme
 
-Visual diagrams for Duckling architecture.
+Visuelle Diagramme für die Duckling-Architektur.
 
-## System Architecture Overview
+## Systemarchitektur-Übersicht
 
 ```mermaid
 flowchart LR
@@ -27,7 +27,7 @@ flowchart LR
 
 ---
 
-## Simple Architecture
+## Einfache Architektur
 
 ```mermaid
 graph LR
@@ -45,7 +45,7 @@ graph LR
 
 ---
 
-## Detailed Layer View
+## Detaillierte Schichtenansicht
 
 ```mermaid
 graph TB
@@ -95,7 +95,7 @@ graph TB
 
 ---
 
-## Conversion Flow
+## Konvertierungs-Fluss
 
 ```mermaid
 sequenceDiagram
@@ -124,7 +124,7 @@ sequenceDiagram
 
 ---
 
-## Batch Processing
+## Stapelverarbeitung
 
 ```mermaid
 sequenceDiagram
@@ -153,9 +153,9 @@ sequenceDiagram
 
 ---
 
-## Scaling Architecture
+## Skalierungsarchitektur
 
-For production deployments with high traffic:
+Für Produktionsbereitstellungen mit hohem Verkehrsaufkommen:
 
 ```mermaid
 graph LR
@@ -185,7 +185,7 @@ graph LR
 
 ---
 
-## Component Tree
+## Komponentenbaum
 
 ```mermaid
 graph TD
@@ -210,7 +210,7 @@ graph TD
 
 ---
 
-## OCR Options
+## OCR-Optionen
 
 ```mermaid
 graph LR
@@ -234,15 +234,14 @@ graph LR
 
 ---
 
-## Static Diagram Images
+## Statische Diagrammbilder
 
-For environments that don't support Mermaid rendering, static images are available:
+Für Umgebungen, die Mermaid-Rendering nicht unterstützen, sind statische Bilder verfügbar:
 
-- [System Architecture](../arch.png)
-- [Detailed Layer View](../Detailed-Layer-View.png)
-- [Conversion Pipeline](../ConversionPipeline.png)
-- [Batch Processing](../BatchProcessing.png)
-- [Scaling Architecture](../ScalingArchitecture.png)
-- [Component Tree](../ComponentTree.png)
-- [OCR Options](../OCR.png)
-
+- [Systemarchitektur](../arch.png)
+- [Detaillierte Schichtenansicht](../Detailed-Layer-View.png)
+- [Konvertierungspipeline](../ConversionPipeline.png)
+- [Stapelverarbeitung](../BatchProcessing.png)
+- [Skalierungsarchitektur](../ScalingArchitecture.png)
+- [Komponentenbaum](../ComponentTree.png)
+- [OCR-Optionen](../OCR.png)

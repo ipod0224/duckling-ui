@@ -96,6 +96,7 @@ jobs:
     name: Docs Build (MkDocs)
     runs-on: ubuntu-latest
 
+          python-version: '3.13'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4

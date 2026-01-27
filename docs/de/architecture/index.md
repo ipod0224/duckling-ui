@@ -1,10 +1,10 @@
-# Architecture
+# Architektur
 
-Technical architecture documentation for Duckling.
+Technische Architekturdokumentation für Duckling.
 
-## Overview
+## Überblick
 
-Duckling is a full-stack web application with a clear separation between frontend and backend:
+Duckling ist eine Full-Stack-Webanwendung mit klarer Trennung zwischen Frontend und Backend:
 
 ```mermaid
 graph LR
@@ -20,90 +20,89 @@ graph LR
     style E fill:#f59e0b,color:#fff
 ```
 
-## Sections
+## Abschnitte
 
 <div class="grid cards" markdown>
 
--   :material-view-dashboard:{ .lg .middle } __System Overview__
+-   :material-view-dashboard:{ .lg .middle } __Systemübersicht__
 
     ---
 
-    High-level architecture and data flow
+    High-Level-Architektur und Datenfluss
 
-    [:octicons-arrow-right-24: Overview](overview.md)
+    [:octicons-arrow-right-24: Übersicht](overview.md)
 
--   :material-puzzle:{ .lg .middle } __Components__
-
-    ---
-
-    Frontend and backend component details
-
-    [:octicons-arrow-right-24: Components](components.md)
-
--   :material-chart-box:{ .lg .middle } __Diagrams__
+-   :material-puzzle:{ .lg .middle } __Komponenten__
 
     ---
 
-    Architecture diagrams and flowcharts
+    Frontend- und Backend-Komponentendetails
 
-    [:octicons-arrow-right-24: Diagrams](diagrams.md)
+    [:octicons-arrow-right-24: Komponenten](components.md)
+
+-   :material-chart-box:{ .lg .middle } __Diagramme__
+
+    ---
+
+    Architekturdiagramme und Flussdiagramme
+
+    [:octicons-arrow-right-24: Diagramme](diagrams.md)
 
 </div>
 
-## Key Design Decisions
+## Wichtige Designentscheidungen
 
-### Separation of Concerns
+### Trennung der Belange
 
-- **Frontend**: React with TypeScript for type safety and modern UI
-- **Backend**: Flask for simplicity and Python ecosystem access
-- **Engine**: Docling for document conversion (IBM's library)
+- **Frontend**: React mit TypeScript für Typsicherheit und moderne UI
+- **Backend**: Flask für Einfachheit und Zugriff auf das Python-Ökosystem
+- **Engine**: Docling für Dokumentkonvertierung (IBMs Bibliothek)
 
-### Async Processing
+### Asynchrone Verarbeitung
 
-Document conversion is handled asynchronously:
+Die Dokumentkonvertierung wird asynchron behandelt:
 
-1. Client uploads file
-2. Server returns job ID immediately
-3. Client polls for status
-4. Server processes in background thread
-5. Results available when complete
+1. Client lädt Datei hoch
+2. Server gibt sofort Job-ID zurück
+3. Client fragt Status ab
+4. Server verarbeitet im Hintergrundthread
+5. Ergebnisse verfügbar, wenn abgeschlossen
 
-### Job Queue
+### Job-Warteschlange
 
-A thread-based job queue prevents memory exhaustion:
+Eine threadbasierte Job-Warteschlange verhindert Speichererschöpfung:
 
-- Maximum 2 concurrent conversions
-- Jobs queued when capacity reached
-- Automatic cleanup of completed jobs
+- Maximum 2 gleichzeitige Konvertierungen
+- Jobs werden in Warteschlange gestellt, wenn Kapazität erreicht
+- Automatische Bereinigung abgeschlossener Jobs
 
-### Settings Persistence
+### Einstellungspersistenz
 
-Settings are stored in JSON and applied per-conversion:
+Einstellungen werden in JSON gespeichert und pro Konvertierung angewendet:
 
-- Global defaults in `config.py`
-- User settings in `user_settings.json`
-- Per-request overrides via API
+- Globale Standardwerte in `config.py`
+- Benutzereinstellungen in `user_settings.json`
+- Pro-Anfrage-Überschreibungen über API
 
-## Technology Stack
+## Technologie-Stack
 
 ### Frontend
 
-| Technology | Purpose |
-|------------|---------|
-| React 18 | UI framework |
-| TypeScript | Type safety |
+| Technologie | Zweck |
+|------------|-------|
+| React 18 | UI-Framework |
+| TypeScript | Typsicherheit |
 | Tailwind CSS | Styling |
-| Framer Motion | Animations |
-| Axios | HTTP client |
-| Vite | Build tool |
+| Framer Motion | Animationen |
+| Axios | HTTP-Client |
+| Vite | Build-Tool |
 
 ### Backend
 
-| Technology | Purpose |
-|------------|---------|
-| Flask | Web framework |
-| SQLAlchemy | Database ORM |
-| SQLite | History storage |
-| Docling | Document conversion |
-| Threading | Async processing |
-
+| Technologie | Zweck |
+|------------|-------|
+| Flask | Web-Framework |
+| SQLAlchemy | Datenbank-ORM |
+| SQLite | Verlaufsspeicherung |
+| Docling | Dokumentkonvertierung |
+| Threading | Asynchrone Verarbeitung |

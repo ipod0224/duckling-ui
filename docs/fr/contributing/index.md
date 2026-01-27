@@ -1,95 +1,94 @@
-# Contributing
+# Contribuer
 
-Thank you for your interest in contributing to Duckling!
+Merci de votre intérêt à contribuer à Duckling !
 
-## Overview
+## Aperçu
 
-This section covers everything you need to know to contribute effectively.
+Cette section couvre tout ce que vous devez savoir pour contribuer efficacement.
 
 <div class="grid cards" markdown>
 
--   :material-laptop:{ .lg .middle } __Development Setup__
+-   :material-laptop:{ .lg .middle } __Configuration du développement__
 
     ---
 
-    Set up your development environment
+    Configurez votre environnement de développement
 
-    [:octicons-arrow-right-24: Setup Guide](development.md)
+    [:octicons-arrow-right-24: Guide de configuration](development.md)
 
--   :material-code-braces:{ .lg .middle } __Code Style__
-
-    ---
-
-    Coding standards and conventions
-
-    [:octicons-arrow-right-24: Style Guide](code-style.md)
-
--   :material-test-tube:{ .lg .middle } __Testing__
+-   :material-code-braces:{ .lg .middle } __Style de code__
 
     ---
 
-    Writing and running tests
+    Standards et conventions de codage
 
-    [:octicons-arrow-right-24: Testing Guide](testing.md)
+    [:octicons-arrow-right-24: Guide de style](code-style.md)
 
--   :material-handshake:{ .lg .middle } __Code of Conduct__
+-   :material-test-tube:{ .lg .middle } __Tests__
 
     ---
 
-    Community guidelines and standards
+    Écrire et exécuter des tests
 
-    [:octicons-arrow-right-24: Code of Conduct](code-of-conduct.md)
+    [:octicons-arrow-right-24: Guide des tests](testing.md)
+
+-   :material-handshake:{ .lg .middle } __Code de conduite__
+
+    ---
+
+    Lignes directrices et standards de la communauté
+
+    [:octicons-arrow-right-24: Code de conduite](code-of-conduct.md)
 
 </div>
 
-## Code of Conduct
+## Code de conduite
 
-By participating in this project, you agree to abide by our [Code of Conduct](code-of-conduct.md), which is based on the Contributor Covenant 3.0. We are committed to providing a welcoming and inclusive environment for everyone.
+En participant à ce projet, vous acceptez de respecter notre [Code de conduite](code-of-conduct.md), basé sur le Contributor Covenant 3.0. Nous nous engageons à fournir un environnement accueillant et inclusif pour tous.
 
-## How to Contribute
+## Comment contribuer
 
-### Reporting Bugs
+### Signaler des bugs
 
-1. **Check existing issues** to avoid duplicates
-2. **Create a new issue** with:
-   - Clear, descriptive title
-   - Steps to reproduce
-   - Expected vs actual behavior
-   - Environment details (OS, browser, versions)
-   - Screenshots if applicable
+1. **Vérifiez les problèmes existants** pour éviter les doublons
+2. **Créez un nouveau problème** avec :
+   - Titre clair et descriptif
+   - Étapes pour reproduire
+   - Comportement attendu vs réel
+   - Détails de l'environnement (OS, navigateur, versions)
+   - Captures d'écran si applicable
 
-### Suggesting Features
+### Suggérer des fonctionnalités
 
-1. **Check existing issues** for similar suggestions
-2. **Create a feature request** with:
-   - Clear description of the feature
-   - Use case and benefits
-   - Possible implementation approach
+1. **Vérifiez les problèmes existants** pour des suggestions similaires
+2. **Créez une demande de fonctionnalité** avec :
+   - Description claire de la fonctionnalité
+   - Cas d'usage et avantages
+   - Approche d'implémentation possible
 
 ### Pull Requests
 
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/your-feature-name`
-3. **Make your changes**
-4. **Write/update tests**
-5. **Run tests**: Ensure all tests pass
-6. **Commit with clear messages**: Follow conventional commits
-7. **Push to your fork**
-8. **Create a Pull Request**
+1. **Forkez le dépôt**
+2. **Créez une branche de fonctionnalité** : `git checkout -b feature/votre-nom-de-fonctionnalite`
+3. **Apportez vos modifications**
+4. **Écrivez/mettez à jour les tests**
+5. **Exécutez les tests** : Assurez-vous que tous les tests passent
+6. **Commitez avec des messages clairs** : Suivez les commits conventionnels
+7. **Poussez vers votre fork**
+8. **Créez une Pull Request**
 
-## Review Process
+## Processus de révision
 
-1. All PRs require at least one approval
-2. CI checks must pass
-3. Code coverage should not decrease
-4. Documentation must be updated if needed
+1. Toutes les PR nécessitent au moins une approbation
+2. Les vérifications CI doivent passer
+3. La couverture de code ne doit pas diminuer
+4. La documentation doit être mise à jour si nécessaire
 
-## Recognition
+## Reconnaissance
 
-Contributors will be recognized in:
+Les contributeurs seront reconnus dans :
 
-- CHANGELOG.md for significant contributions
-- README.md contributors section
+- CHANGELOG.md pour les contributions significatives
+- Section des contributeurs du README.md
 
-Thank you for contributing to Duckling!
-
+Merci de contribuer à Duckling !

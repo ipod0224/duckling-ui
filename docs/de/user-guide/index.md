@@ -1,52 +1,51 @@
-# User Guide
+# Benutzerhandbuch
 
-Learn how to use Duckling effectively.
+Erfahren Sie, wie Sie Duckling effektiv nutzen.
 
-## Overview
+## Überblick
 
-Duckling provides a comprehensive interface for document conversion with advanced features like OCR, table extraction, and RAG chunking.
+Duckling bietet eine umfassende Oberfläche für die Dokumentkonvertierung mit erweiterten Funktionen wie OCR, Tabellenextraktion und RAG-Chunking.
 
-## Sections
+## Abschnitte
 
 <div class="grid cards" markdown>
 
--   :material-star:{ .lg .middle } __Features__
+-   :material-star:{ .lg .middle } __Funktionen__
 
     ---
 
-    Explore all the capabilities of Duckling
+    Erkunden Sie alle Funktionen von Duckling
 
-    [:octicons-arrow-right-24: View Features](features.md)
+    [:octicons-arrow-right-24: Funktionen anzeigen](features.md)
 
--   :material-file-document:{ .lg .middle } __Supported Formats__
-
-    ---
-
-    Input and output format reference
-
-    [:octicons-arrow-right-24: Format Guide](formats.md)
-
--   :material-cog:{ .lg .middle } __Configuration__
+-   :material-file-document:{ .lg .middle } __Unterstützte Formate__
 
     ---
 
-    Customize OCR, tables, images, and performance settings
+    Referenz für Eingabe- und Ausgabeformate
 
-    [:octicons-arrow-right-24: Configuration Guide](configuration.md)
+    [:octicons-arrow-right-24: Format-Anleitung](formats.md)
+
+-   :material-cog:{ .lg .middle } __Konfiguration__
+
+    ---
+
+    Passen Sie OCR-, Tabellen-, Bild- und Leistungseinstellungen an
+
+    [:octicons-arrow-right-24: Konfigurationsanleitung](configuration.md)
 
 </div>
 
-## Quick Tips
+## Schnelle Tipps
 
-!!! tip "Batch Processing"
-    Toggle batch mode to convert multiple files simultaneously. The system processes up to 2 files in parallel to balance speed and memory usage.
+!!! tip "Stapelverarbeitung"
+    Aktivieren Sie den Batch-Modus, um mehrere Dateien gleichzeitig zu konvertieren. Das System verarbeitet bis zu 2 Dateien parallel, um Geschwindigkeit und Speichernutzung auszugleichen.
 
-!!! tip "OCR Selection"
-    - **EasyOCR**: Best for multi-language documents with GPU support
-    - **Tesseract**: Reliable for simple documents
-    - **macOS Vision**: Fastest on Mac with Apple Silicon
-    - **RapidOCR**: Lightweight and fast
+!!! tip "OCR-Auswahl"
+    - **EasyOCR**: Am besten für mehrsprachige Dokumente mit GPU-Unterstützung
+    - **Tesseract**: Zuverlässig für einfache Dokumente
+    - **macOS Vision**: Schnellste auf Mac mit Apple Silicon
+    - **RapidOCR**: Leichtgewichtig und schnell
 
-!!! tip "RAG Chunking"
-    Enable chunking in settings to generate document chunks optimized for retrieval-augmented generation. Chunks include metadata like headings and page numbers.
-
+!!! tip "RAG-Chunking"
+    Aktivieren Sie das Chunking in den Einstellungen, um Dokument-Segmente zu generieren, die für retrieval-augmented generation optimiert sind. Chunks enthalten Metadaten wie Überschriften und Seitennummern.
