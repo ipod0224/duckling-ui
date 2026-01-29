@@ -154,9 +154,7 @@ graph LR
 - **[API-Referenz](api/index.md)** - Vollständige API-Dokumentation
 - **[Architektur](architecture/index.md)** - Systemdesign und Komponenten
 - **[Bereitstellung](deployment/index.md)** - Produktionsbereitstellungsanleitung
-- **[Mitwirken](contributing/index.md)** - Wie man beiträgt
-
-## Danksagungen- [Docling](https://github.com/docling-project/docling) von IBM für die leistungsstarke Dokumentkonvertierungs-Engine
+- **[Mitwirken](contributing/index.md)** - Wie man beiträgt## Danksagungen- [Docling](https://github.com/docling-project/docling) von IBM für die leistungsstarke Dokumentkonvertierungs-Engine
 - [React](https://react.dev/) für das Frontend-Framework
 - [Flask](https://flask.palletsprojects.com/) für das Backend-Framework
 - [Tailwind CSS](https://tailwindcss.com/) für das Styling
