@@ -78,11 +78,13 @@ Une file d'attente basée sur les threads empêche l'épuisement de la mémoire 
 
 ### Persistance des paramètres
 
-Les paramètres sont stockés en JSON et appliqués par conversion :
+Les paramètres sont stockés par session utilisateur et appliqués par conversion :
 
 - Valeurs par défaut globales dans `config.py`
-- Paramètres utilisateur dans `user_settings.json`
+- Paramètres utilisateur stockés dans la base de données (par ID de session)
 - Remplacements par requête via l'API
+
+Les paramètres sont isolés par session utilisateur, garantissant que les déploiements multi-utilisateurs n'interfèrent pas avec les préférences des autres.
 
 ## Pile technologique
 

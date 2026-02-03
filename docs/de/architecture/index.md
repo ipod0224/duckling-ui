@@ -78,11 +78,13 @@ Eine threadbasierte Job-Warteschlange verhindert Speichererschöpfung:
 
 ### Einstellungspersistenz
 
-Einstellungen werden in JSON gespeichert und pro Konvertierung angewendet:
+Einstellungen werden pro Benutzersitzung gespeichert und pro Konvertierung angewendet:
 
 - Globale Standardwerte in `config.py`
-- Benutzereinstellungen in `user_settings.json`
+- Benutzereinstellungen in der Datenbank (pro Sitzungs-ID)
 - Pro-Anfrage-Überschreibungen über API
+
+Einstellungen sind pro Benutzersitzung isoliert, sodass Multi-User-Bereitstellungen sich nicht gegenseitig beeinträchtigen.
 
 ## Technologie-Stack
 
