@@ -176,18 +176,21 @@ export default function App() {
               <select
                 id="language-select"
                 value={
-                  i18n.language?.toLowerCase().startsWith("es")
-                    ? "es"
-                    : i18n.language?.toLowerCase().startsWith("fr")
-                      ? "fr"
-                      : i18n.language?.toLowerCase().startsWith("de")
-                        ? "de"
-                        : "en"
+                  i18n.language === "zh-TW" || i18n.language?.toLowerCase().startsWith("zh")
+                    ? "zh-TW"
+                    : i18n.language?.toLowerCase().startsWith("es")
+                      ? "es"
+                      : i18n.language?.toLowerCase().startsWith("fr")
+                        ? "fr"
+                        : i18n.language?.toLowerCase().startsWith("de")
+                          ? "de"
+                          : "en"
                 }
                 onChange={(e) => void i18n.changeLanguage(e.target.value)}
                 className="bg-dark-800 text-dark-200 text-sm rounded-lg px-2 py-1.5 border border-dark-700 hover:border-dark-600 focus:outline-none focus:ring-2 focus:ring-primary-500"
                 aria-label={t("language.label")}
               >
+                <option value="zh-TW">{t("language.zh-TW")}</option>
                 <option value="en">{t("language.en")}</option>
                 <option value="es">{t("language.es")}</option>
                 <option value="fr">{t("language.fr")}</option>

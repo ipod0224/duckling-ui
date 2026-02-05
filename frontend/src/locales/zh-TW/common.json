@@ -1,0 +1,318 @@
+{
+  "language": {
+    "label": "語言",
+    "en": "英文",
+    "es": "西班牙文",
+    "fr": "法文",
+    "de": "德文",
+    "zh-TW": "繁體中文"
+  },
+  "app": {
+    "name": "Duckling",
+    "tagline": "文件轉換工具",
+    "poweredBy": "技術支援"
+  },
+  "actions": {
+    "batch": "批次處理",
+    "documentation": "說明文件",
+    "history": "歷史紀錄",
+    "settings": "設定",
+    "close": "關閉"
+  },
+  "home": {
+    "headline": "轉換任何文件",
+    "subheadline": "將 PDF、Word 文件、簡報、圖片等轉換成結構化格式，為 AI 處理做好準備。"
+  },
+  "batch": {
+    "toggleTitle": "切換批次模式以上傳多個檔案"
+  },
+  "conversion": {
+    "uploadingSingle": "正在上傳檔案...",
+    "uploadingMultiple": "正在上傳檔案...",
+    "failedTitle": "轉換失敗",
+    "failedCta": "重試",
+    "processingFilesTitle": "正在處理檔案",
+    "overallProgress": "整體進度",
+    "filesCount": "{{completed}}/{{total}} 個檔案"
+  },
+  "features": {
+    "ocr": "OCR",
+    "ocrDesc": "從圖片擷取文字",
+    "tables": "表格",
+    "tablesDesc": "匯出為 CSV",
+    "images": "圖片",
+    "imagesDesc": "擷取圖形",
+    "rag": "RAG",
+    "ragDesc": "文件分塊"
+  },
+  "docsPanel": {
+    "title": "說明文件",
+    "subtitle": "Duckling 參考手冊",
+    "navigation": "導覽",
+    "homeCategory": "首頁",
+    "loading": "載入中...",
+    "notBuiltTitle": "說明文件尚未建置",
+    "notBuiltBody": "說明文件網站需要先建置才能檢視。",
+    "build": "建置說明文件",
+    "building": "建置中...",
+    "rebuild": "重新建置",
+    "openNewTab": "在新分頁開啟",
+    "notBuiltYet": "說明文件尚未建置。",
+    "fullAt": "完整說明文件位於"
+  },
+  "settingsPanel": {
+    "title": "設定"
+  },
+  "settings": {
+    "sections": {
+      "ocr": "OCR（光學字元辨識）",
+      "tables": "表格擷取",
+      "images": "圖片處理",
+      "performance": "效能",
+      "chunking": "RAG / 分塊",
+      "enrichment": "文件增強",
+      "output": "輸出偏好設定"
+    },
+    "actions": {
+      "installing": "安裝中...",
+      "install": "安裝 {{name}}",
+      "dismiss": "關閉",
+      "download": "下載",
+      "resetDefaults": "重設為預設值"
+    },
+    "ocr": {
+      "enable": {
+        "label": "啟用 OCR",
+        "description": "從掃描文件和圖片中擷取文字"
+      },
+      "backend": {
+        "label": "OCR 引擎",
+        "description": "用於文字辨識的引擎"
+      },
+      "backendStatus": {
+        "availableSuffix": " ✓",
+        "needsSystemInstallSuffix": " ⚠ (需要系統安裝)",
+        "notConfiguredSuffix": " (未設定)",
+        "notInstalledSuffix": " (未安裝)"
+      },
+      "status": {
+        "installedReady": "{{name}} 已安裝並就緒",
+        "requiresManual": "需要手動系統安裝",
+        "cannotInstallInUi": "{{name}} 無法從此介面安裝。請手動安裝：",
+        "downloadFromGithub": "從 GitHub 下載",
+        "notInstalled": "{{name}} 尚未安裝"
+      },
+      "language": {
+        "label": "OCR 語言",
+        "description": "文字辨識的主要語言"
+      },
+      "forceFullPage": {
+        "label": "強制全頁 OCR",
+        "description": "對整頁進行 OCR，而非僅偵測到的文字區域"
+      },
+      "useGpu": {
+        "label": "使用 GPU",
+        "description": "啟用 GPU 加速（僅限 EasyOCR）"
+      },
+      "confidence": {
+        "label": "信心閾值",
+        "description": "OCR 結果的最低信心值"
+      }
+    },
+    "tables": {
+      "enable": {
+        "label": "啟用表格擷取",
+        "description": "從文件中偵測並擷取表格"
+      },
+      "mode": {
+        "label": "偵測模式",
+        "description": "在速度與準確度之間取得平衡"
+      },
+      "structure": {
+        "label": "結構擷取",
+        "description": "保留表格結構和儲存格關聯"
+      },
+      "cellMatching": {
+        "label": "儲存格配對",
+        "description": "將儲存格內容與表格結構配對"
+      }
+    },
+    "images": {
+      "extract": {
+        "label": "擷取圖片",
+        "description": "從文件中擷取嵌入的圖片"
+      },
+      "classify": {
+        "label": "圖片分類",
+        "description": "自動分類並標記圖片"
+      },
+      "generatePage": {
+        "label": "產生頁面圖片",
+        "description": "為每一頁建立圖片"
+      },
+      "generatePictures": {
+        "label": "產生圖片檔案",
+        "description": "將嵌入的圖片擷取為獨立檔案"
+      },
+      "generateTables": {
+        "label": "產生表格圖片",
+        "description": "將表格擷取為圖片"
+      },
+      "scale": {
+        "label": "圖片比例",
+        "description": "擷取圖片的縮放比例（1.0 = 原始大小）"
+      }
+    },
+    "performance": {
+      "device": {
+        "label": "處理裝置",
+        "description": "文件處理使用的硬體"
+      },
+      "threads": {
+        "label": "CPU 執行緒",
+        "description": "處理使用的執行緒數量"
+      },
+      "timeout": {
+        "label": "文件逾時（秒）",
+        "description": "最長處理時間（0 = 無限制）"
+      }
+    },
+    "chunking": {
+      "enable": {
+        "label": "啟用分塊",
+        "description": "將文件分割成區塊以供 RAG 應用使用"
+      },
+      "maxTokens": {
+        "label": "每個區塊最大 Token 數",
+        "description": "每個區塊的最大 Token 數量"
+      },
+      "mergePeers": {
+        "label": "合併相鄰區塊",
+        "description": "將具有相似元資料的小區塊合併"
+      }
+    },
+    "enrichment": {
+      "code": {
+        "label": "程式碼增強",
+        "description": "透過語言偵測增強程式碼區塊"
+      },
+      "formula": {
+        "label": "公式增強",
+        "description": "從數學公式擷取 LaTeX"
+      },
+      "pictureClassification": {
+        "label": "圖片分類",
+        "description": "按類型分類圖片（圖表、圖形、照片等）"
+      },
+      "pictureDescription": {
+        "label": "圖片描述",
+        "description": "為圖片產生 AI 說明（較慢）"
+      },
+      "warning": "⚠️ 增強功能可能需要下載額外模型，並會大幅增加處理時間。",
+      "preDownload": {
+        "title": "預先下載模型",
+        "description": "提前下載模型，避免文件處理時延遲。"
+      },
+      "model": {
+        "ready": "✓ 就緒",
+        "unavailable": "⚠ 無法使用"
+      },
+      "upgradeTip": "💡 提示：升級 Docling 以啟用增強功能："
+    },
+    "output": {
+      "defaultFormat": {
+        "label": "預設格式",
+        "description": "下載時偏好的輸出格式"
+      }
+    }
+  },
+  "historyPanel": {
+    "title": "歷史紀錄",
+    "searchPlaceholder": "搜尋歷史紀錄...",
+    "total": "總計",
+    "success": "成功",
+    "failed": "失敗",
+    "noResults": "找不到結果",
+    "noHistory": "尚無轉換紀錄",
+    "clearAll": "清除所有歷史紀錄",
+    "clearConfirm": "確定要清除所有歷史紀錄嗎？"
+  },
+  "dropzone": {
+    "localFile": "本機檔案",
+    "localFiles": "本機檔案",
+    "url": "網址",
+    "urls": "網址",
+    "uploading": "上傳中...",
+    "fileTypeNotSupported": "不支援此檔案類型",
+    "dropHereSingle": "將檔案拖曳至此",
+    "dropHereMultiple": "將檔案拖曳至此",
+    "dragAndDropSingle": "將文件拖曳至此處",
+    "dragAndDropMultiple": "將文件拖曳至此處",
+    "orClickToBrowse": "或點擊瀏覽",
+    "multipleEnabled": "✨ 已啟用多檔上傳 - 選擇或拖曳多個檔案",
+    "categories": {
+      "documents": "文件",
+      "web": "網頁",
+      "images": "圖片",
+      "data": "資料"
+    },
+    "enterUrlTitleSingle": "輸入文件網址",
+    "enterUrlTitleMultiple": "輸入文件網址",
+    "enterUrlBodySingle": "貼上文件的直接連結（PDF、DOCX 等）",
+    "enterUrlBodyMultiple": "每行貼上一個網址以轉換多個文件",
+    "singleUrlPlaceholder": "https://example.com/document.pdf",
+    "multipleUrlsPlaceholder": "https://example.com/document1.pdf\nhttps://example.com/document2.docx\nhttps://example.com/document3.html",
+    "urlsEntered": "已輸入 {{count}} 個網址",
+    "processing": "處理中...",
+    "convert": "轉換",
+    "convertAll": "全部轉換",
+    "loading": "載入中...",
+    "pressEnter": "按 Enter 送出或點擊轉換",
+    "supportedHint": "支援：PDF、DOCX、PPTX、XLSX、HTML、Markdown、圖片等",
+    "maxFileSize": "單檔最大：100MB",
+    "maxDownloadSize": "單一網址最大下載：100MB",
+    "errorEnterUrl": "請輸入網址",
+    "errorInvalidUrl": "請輸入有效的 HTTP 或 HTTPS 網址",
+    "errorEnterAtLeastOneUrl": "請至少輸入一個網址",
+    "errorInvalidUrls": "無效的網址：{{urls}}"
+  },
+  "export": {
+    "completeTitle": "轉換完成！",
+    "confidence": "信心度：",
+    "images": "張圖片",
+    "tables": "個表格",
+    "chunks": "個區塊",
+    "tabExportFormats": "匯出格式",
+    "tabImages": "圖片",
+    "tabTables": "表格",
+    "tabChunks": "RAG 區塊",
+    "exportFormatTitle": "匯出格式",
+    "download": "下載",
+    "convertAnother": "轉換其他文件",
+    "previewTitle": "預覽",
+    "rendered": "渲染",
+    "raw": "原始",
+    "hide": "隱藏",
+    "show": "顯示",
+    "noPreview": "此格式無法預覽",
+    "clickShow": "點擊「顯示」檢視預覽",
+    "extractedImagesTitle": "擷取的圖片",
+    "noImages": "此文件未擷取到圖片",
+    "extractedTablesTitle": "擷取的表格",
+    "noTables": "此文件未擷取到表格",
+    "rows": "{{count}} 列",
+    "ragChunksTitle": "RAG 區塊",
+    "noChunks": "未產生區塊",
+    "enableChunkingHint": "在設定中啟用分塊以產生 RAG 區塊",
+    "downloadAllChunks": "下載所有區塊（JSON）",
+    "viewFullSize": "檢視完整大小"
+  },
+  "progress": {
+    "title": "正在轉換文件",
+    "uploadComplete": "上傳完成",
+    "analyzing": "正在分析文件結構",
+    "extracting": "正在擷取內容",
+    "generating": "正在產生輸出格式",
+    "finalizing": "正在完成"
+  }
+}

@@ -4,7 +4,8 @@
     "en": "English",
     "es": "Spanish",
     "fr": "French",
-    "de": "German"
+    "de": "German",
+    "zh-TW": "Chinese (Traditional)"
   },
   "app": {
     "name": "Duckling",

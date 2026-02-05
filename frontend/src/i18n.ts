@@ -29,22 +29,24 @@ import enCommon from './locales/en/common.json';
 import esCommon from './locales/es/common.json';
 import frCommon from './locales/fr/common.json';
 import deCommon from './locales/de/common.json';
+import zhTWCommon from './locales/zh-TW/common.json';
 
 const STORAGE_KEY = 'duckling.locale';
 
-function detectInitialLanguage(): 'en' | 'es' | 'fr' | 'de' {
+function detectInitialLanguage(): 'en' | 'es' | 'fr' | 'de' | 'zh-TW' {
   try {
     const storage = typeof window !== 'undefined' ? window.localStorage : undefined;
     const saved =
       storage && typeof storage.getItem === 'function'
         ? storage.getItem(STORAGE_KEY)
         : null;
-    if (saved === 'en' || saved === 'es' || saved === 'fr' || saved === 'de') return saved;
+    if (saved === 'en' || saved === 'es' || saved === 'fr' || saved === 'de' || saved === 'zh-TW') return saved;
   } catch {
     // ignore storage access issues (e.g., test env / private mode)
   }
 
   const nav = (navigator.language || '').toLowerCase();
+  if (nav.startsWith('zh-tw') || nav.startsWith('zh-hant') || nav === 'zh') return 'zh-TW';
   if (nav.startsWith('es')) return 'es';
   if (nav.startsWith('fr')) return 'fr';
   if (nav.startsWith('de')) return 'de';
@@ -59,6 +61,7 @@ void i18n
       es: { common: esCommon },
       fr: { common: frCommon },
       de: { common: deCommon },
+      'zh-TW': { common: zhTWCommon },
     },
     lng: detectInitialLanguage(),
     fallbackLng: 'en',
@@ -75,7 +78,7 @@ i18n.on('languageChanged', (lng) => {
     if (
       storage &&
       typeof storage.setItem === 'function' &&
-      (lng === 'en' || lng === 'es' || lng === 'fr' || lng === 'de')
+      (lng === 'en' || lng === 'es' || lng === 'fr' || lng === 'de' || lng === 'zh-TW')
     ) {
       storage.setItem(STORAGE_KEY, lng);
     }
